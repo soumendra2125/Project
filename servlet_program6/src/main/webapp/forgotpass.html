@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <style>
+        body {
+            background-color: crimson;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .first {
+            padding: 20px
+        }
+
+        .sec {
+            padding: 20px
+        }
+
+        .des {
+            padding-right: 20px;
+        }
+
+        .box {
+            padding: 6px;
+
+        }
+
+        .s1:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <h1 style="font-size: 40px; text-align: center;"><u>Help Center</u></h1>
+        <br>
+        <form action="log3">
+            <div class="sec">
+                <label class="des" for="user"><b>Username:</b></label>
+                <input class="box" style="margin-left: 75px;" type="text" name="user" placeholder="Enter Username"
+                    required>
+            </div>
+
+            <div class="sec">
+                <label class="des" for="phone"><b>Phone Number:</b></label>
+                <input class="box" style="margin-left: 31px;" type="tel" name="phone" placeholder="Enter phone number"
+                    pattern="[0-9]{10}" title="Must be a 10 digit number" required>
+            </div>
+
+            <div class="sec">
+                <button style="padding: 4px; margin-left: 23px;" class="s1" type="submit">Submit</button>
+            </div class="sec">
+                <a style="margin-right: 260px;" href="http://localhost:8082/servlet_program6/login.html">Go back</a>
+            <div>
+
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

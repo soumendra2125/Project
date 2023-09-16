@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script>
+    	//Function to show the password
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        // Function to check Whether both passwords
+        // is same or not.
+        function checkPassword(form) {
+            password1 = form.pass.value;
+            password2 = form.pass1.value;
+
+            // If password not entered
+            if (password1 == '')
+                alert("Please enter Password");
+
+            // If confirm password not entered
+            else if (password2 == '')
+                alert("Please enter confirm password");
+
+            // If Not same return False.    
+            else if (password1 != password2) {
+                alert("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            else {
+                alert("Password Match: Welcome to Java Technocrat")
+                return true;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <style>
+        body {
+            background-image: url(./wallpaper.jpg);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .first {
+            padding: 20px;
+            background-color: lightcyan;
+            margin-left: auto;
+            margin-right: auto;
+            height: 625px;
+            width: 610px
+        }
+
+        .sec {
+            padding: 13px;
+        }
+
+        .des {
+            padding-right: 20px;
+        }
+
+        .box {
+            padding: 6px;
+
+        }
+
+        .s1:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <h1 style="font-size: 40px; text-align: center;"><u>Signup</u></h1>
+        <br>
+        <form onsubmit="return checkPassword(this)" action="log2">
+            <div class="sec">
+                <label class="des" for="user"><b>Username:</b></label>
+                <input class="box" style="margin-left: 75px;" type="text" name="user" placeholder="Enter Username"
+                    required>
+            </div>
+
+            <div class="sec">
+                <label class="des" for="phone"><b>Phone Number:</b></label>
+                <input class="box" style="margin-left: 31px;" type="tel" name="phone" placeholder="Enter phone number"
+                    pattern="[0-9]{10}" title="Must be a 10 digit number" required>
+            </div>
+
+            <div class="sec">
+                <label class="des" for="email"><b>Email id:</b></label>
+                <input class="box" style="margin-left: 88px;" type="email" name="email" placeholder="Enter Email"
+                    required>
+            </div>
+
+            <div class="sec">
+                <label class="des" for="myInput"><b>Password: </b></label>
+                <input class="box" style="margin-left: 75px;" type="password" id="myInput" name="pass"
+                    placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, 
+                and at least 8 or more characters" required>
+                <!-- <span><input type="checkbox" onclick="myFunction()">Show Password</span> -->
+            </div>
+
+            <div>
+                <span style="margin-left: 205px; font-size: 15px;"><input type="checkbox" onclick="myFunction()">Show Password</span>
+            </div>
+
+            <div class="sec">
+                <label class="des" for="pass"><b>Re-enter Password: </b></label>
+                <input class="box" type="password" name="pass1" required>
+            </div>
+            <div class="sec">
+                <input type="checkbox" name="chk" id="chk" required>I accept the terms and conditions
+            </div>
+
+            <div class="sec">
+                <input class="s1" type="submit" value="submit">
+            </div class="sec">
+            <p style="text-align: center;">Already have an account? <a href="http://localhost:8082/servlet_program6/login.html">Login</a></p>
+            <div>
+
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

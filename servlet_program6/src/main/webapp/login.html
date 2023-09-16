@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            background-image: url(./photo.jpg);
+            background-size: cover;
+            text-align: center;
+        }
+
+        .first {
+            background-color: lightcyan;
+            height: 530px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 55px;
+            padding: 15px
+        }
+
+        .sec {
+            padding: 20px
+        }
+
+        .des {
+            padding-right: 20px;
+            font-size: 25px;
+        }
+
+        .box {
+            padding: 5px
+        }
+
+        .s1:hover {
+            background-color: green;
+        }
+
+        .forgot {
+            margin-left: 185px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <h1 style="font-size: 50px;"><u>Login</u></h1>
+        <br>
+        <form action="log1">
+            <div class="sec">
+                <label class="des"><b>Username: </b></label>
+                <input class="box" type="text" name="user" placeholder="Enter Username" required>
+            </div>
+
+            <div class="sec">
+                <label style="padding-right: 27px" class="des" for="myInput"><b>Password: </b></label>
+                <input class="box" type="password" id="myInput" name="pass" placeholder="Enter Password" required>
+                
+            </div>
+
+
+            <div>
+                <span style="margin-left: 205px; font-size: 15px;"><input type="checkbox" onclick="myFunction()">Show Password</span>
+            </div>
+            <br>
+            <div class="forgot">
+                <a href="http://localhost:8082/servlet_program6/forgotpass.html">Forgot Password?</a>
+            </div>
+
+            <div class="sec">
+                <button style="padding: 4px;" class="s1" type="submit">Login</button>
+            </div class="sec">
+            <p style="font-size: 20px;">New User ? <a href="http://localhost:8082/servlet_program6/signup.html">Signup</a></p>
+            <div>
+
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
