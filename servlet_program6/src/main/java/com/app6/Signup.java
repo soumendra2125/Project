@@ -70,7 +70,7 @@ public class Signup extends GenericServlet {
 			ps.setString(4, s4);
 			ps.executeUpdate();
 			out.println("<html><body style='background-color:lightcoral; color: blue; font-size: 30px; text-align: center;'>");
-			out.println("<br><br><b>Welcome to Java Technocrat</b>");
+			out.println("<br><br><b>Welcome to Java Technocrat.</b>");
 			out.println("</body></html>");
 //			if(s4.equals(s5))
 //			{
